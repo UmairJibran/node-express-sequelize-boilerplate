@@ -1,0 +1,37 @@
+{
+	"name": "basic-backend-app",
+	"version": "0.0.0",
+	"description": "It is basic structure for a backend server application",
+	"main": "server.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/UmairJibran/basic-backend-app.git"
+	},
+	"author": "Umair Jibran",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/UmairJibran/basic-backend-app/issues"
+	},
+	"homepage": "https://github.com/UmairJibran/basic-backend-app#readme",
+	"devDependencies": {
+		"dotenv": "^10.0.0",
+		"eslint": "^8.4.1",
+		"faker": "^5.5.3",
+		"jest": "^27.4.4",
+		"nodemon": "^2.0.15",
+		"prettier": "^2.5.1",
+		"supertest": "^6.1.6"
+	},
+	"dependencies": {
+		"date-fns": "^2.27.0",
+		"express": "^4.17.1",
+		"firebase-admin": "^10.0.0",
+		"lodash": "^4.17.21",
+		"moment": "^2.29.1",
+		"mysql2": "^2.3.3",
+		"sequelize": "^6.12.0-beta.3"
+	}
+}
