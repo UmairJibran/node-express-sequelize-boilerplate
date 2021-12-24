@@ -1,37 +1,51 @@
 {
-	"name": "basic-backend-app",
-	"version": "0.0.0",
-	"description": "It is basic structure for a backend server application",
-	"main": "server.js",
-	"scripts": {
-		"test": "jest"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/UmairJibran/basic-backend-app.git"
-	},
-	"author": "Umair Jibran",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/UmairJibran/basic-backend-app/issues"
-	},
-	"homepage": "https://github.com/UmairJibran/basic-backend-app#readme",
-	"devDependencies": {
-		"dotenv": "^10.0.0",
-		"eslint": "^8.4.1",
-		"faker": "^5.5.3",
-		"jest": "^27.4.4",
-		"nodemon": "^2.0.15",
-		"prettier": "^2.5.1",
-		"supertest": "^6.1.6"
-	},
-	"dependencies": {
-		"date-fns": "^2.27.0",
-		"express": "^4.17.1",
-		"firebase-admin": "^10.0.0",
-		"lodash": "^4.17.21",
-		"moment": "^2.29.1",
-		"mysql2": "^2.3.3",
-		"sequelize": "^6.12.0-beta.3"
-	}
+  "name": "basic-server-backend",
+  "version": "0.0.1",
+  "description": "It is basic structure for a backend server application",
+  "main": "server.js",
+  "scripts": {
+    "pretest": "npx sequelize db:migrate --env test",
+    "test": "jest --coverage --runInBand --detectOpenHandles --forceExit",
+    "posttest": "npx sequelize db:migrate:undo --env test",
+    "pretest:remote": "npx sequelize db:migrate --env test_remote",
+    "test:remote": "NODE_ENV='test_remote' jest --runInBand --detectOpenHandles --forceExit",
+    "posttest:remote": "npx sequelize db:migrate:undo --env test_remote",
+    "server": "nodemon .\\bin\\dev",
+    "start": "node server.js",
+    "db:migrate": "npx sequelize db:migrate",
+    "db:migrate:undo": "npx sequelize db:migrate:undo",
+    "db:migrate:undo:all": "npx sequelize db:migrate:undo:all",
+    "prettier": "npx prettier -c .",
+    "lint": "npx eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UmairJibran/basic-backend-app.git"
+  },
+  "author": "Umair Jibran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UmairJibran/basic-backend-app/issues"
+  },
+  "homepage": "https://github.com/UmairJibran/basic-backend-app#readme",
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "eslint": "^8.4.1",
+    "faker": "^5.5.3",
+    "jest": "^27.4.4",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "supertest": "^6.1.6"
+  },
+  "dependencies": {
+    "convict": "^6.2.1",
+    "convict-format-with-validator": "^6.2.0",
+    "date-fns": "^2.27.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^10.0.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-beta.3"
+  }
 }
