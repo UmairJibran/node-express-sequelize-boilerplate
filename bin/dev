@@ -1,0 +1,2 @@
+require('dotenv').config({ path: './config/environments/.env' })
+require('./../server.js')
