@@ -37,4 +37,4 @@ node_modules/
 
 .cache
 
-config/environments/development.json
+config/environments/*
