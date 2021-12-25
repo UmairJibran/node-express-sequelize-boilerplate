@@ -1,5 +1,8 @@
-const { foo } = require("./foo");
+const { createUser } = require("../use-cases");
 
-const createFoo = foo({ message: "Hello, world!" });
+const { userSignin } = require("./users");
+const { isNil } = require("../util");
 
-module.exports = { createFoo };
+const signinUser = userSignin({ createUser, isNil });
+
+module.exports = { signinUser };
