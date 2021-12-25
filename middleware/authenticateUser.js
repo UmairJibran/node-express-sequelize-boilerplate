@@ -1,24 +1,24 @@
 const { auth } = require("../firebase");
 
 const authenticateUser = async (req, res, next) => {
-	try {
-		const headerToken = req.headers.authorization;
-		if (!headerToken) {
-			return res.status(401).send({ message: "No token provided" });
-		}
+  try {
+    const headerToken = req.headers.authorization;
+    if (!headerToken) {
+      return res.status(401).send({ message: "No token provided" });
+    }
 
-		if (headerToken && headerToken.split(" ")[0] !== "Bearer") {
-			res.status(401).send({ message: "Invalid token" });
-		}
+    if (headerToken && headerToken.split(" ")[0] !== "Bearer") {
+      res.status(401).send({ message: "Invalid token" });
+    }
 
-		let token = headerToken.split(" ")[1];
-		await auth.verifyIdToken(token);
+    let token = headerToken.split(" ")[1];
+    await auth.verifyIdToken(token);
 
-		next();
-	} catch (error) {
-		req.log.error(error);
-		res.status(403).send({ message: "Could not authorize" });
-	}
+    next();
+  } catch (error) {
+    req.log.error(error);
+    res.status(403).send({ message: "Could not authorize" });
+  }
 };
 
 module.exports = authenticateUser;
