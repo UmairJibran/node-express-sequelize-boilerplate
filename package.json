@@ -7,7 +7,7 @@
     "pretest": "npx sequelize db:migrate --env test",
     "test": "jest --coverage --runInBand --detectOpenHandles --forceExit",
     "posttest": "npx sequelize db:migrate:undo --env test",
-    "pretest:remote": "npx sequelize db:migrate --env test_remote",
+    "pretest:remote": "npx sequelize db:migrate:undo --env test_remote && npx sequelize db:migrate --env test_remote",
     "test:remote": "NODE_ENV='test_remote' jest --runInBand --detectOpenHandles --forceExit",
     "posttest:remote": "npx sequelize db:migrate:undo --env test_remote",
     "server": "nodemon .\\bin\\dev",

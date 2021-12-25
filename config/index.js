@@ -134,6 +134,9 @@ console.log("environment is", env);
 if (env === "development" || env === "test") {
   config.loadFile(__dirname + "/environments/" + env + ".json");
 }
+if (env === "test_remote") {
+  config.loadFile(__dirname + "/" + env + ".json");
+}
 
 // Perform validation
 config.validate({ allowed: "strict" });
