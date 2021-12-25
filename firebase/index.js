@@ -1,15 +1,15 @@
 const admin = require("firebase-admin");
-const credentials = require("../config");
+const config = require("../config");
 
 const firebase = { auth: {} };
 
 // credential: admin.credential.cert(credentials.get("firebase"))
 const defaultApp = admin.initializeApp({
-	credential: admin.credential.cert({
-		project_id: credentials.get("firebase").project_id,
-		private_key: credentials.get("firebase").private_key.replace(/\\n/g, "\n"),
-		client_email: credentials.get("firebase").client_email,
-	}),
+  credential: admin.credential.cert({
+    project_id: config.get("firebase").project_id,
+    private_key: config.get("firebase").private_key.replace(/\\n/g, "\n"),
+    client_email: config.get("firebase").client_email,
+  }),
 });
 
 const auth = defaultApp.auth();
