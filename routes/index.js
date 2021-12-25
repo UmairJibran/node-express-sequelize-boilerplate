@@ -1,17 +1,20 @@
 const express = require("express");
+const moment = require("moment");
 const router = express.Router();
-
-// Routers
-const fooRouter = require("./foo");
+const { versionCompatiblity } = require("../middleware/");
 
 // Middlewares
 // const authenticateUser = require("../middleware/authenticateUser"); // TODO: uncomment when to use
 
 // routes
-router.get("/", (req, res) => {
-	res.status(200).send("Release 2.0.0");
+
+router.all("/", versionCompatiblity, (req, res) => {
+  res.status(200).json({
+    version: process.env.VERSION,
+    currentTimeStamp: moment.now(),
+  });
 });
 
-router.use("/foo", fooRouter);
+router.use("/users", versionCompatiblity, require("./users"));
 
 module.exports = router;
