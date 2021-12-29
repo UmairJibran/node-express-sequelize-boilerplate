@@ -24,8 +24,8 @@ jobs:
           cd ./config
           mkdir environments
           cd environments
-          echo VERSION = 0.0.1 >> ./config/environments/.env
-          echo NODE_ENV = test_remote >> ./config/environments/.env
+          echo VERSION = 0.0.1 >> .env
+          echo NODE_ENV = test_remote >> .env
 
       - name: Install Dependencies
         run: npm install
