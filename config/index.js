@@ -1,3 +1,5 @@
+const path = require("path");
+
 const convict = require("convict");
 const convict_format_with_validator = require("convict-format-with-validator");
 
@@ -132,9 +134,10 @@ var config = convict({
 let env = config.get("env");
 console.log("environment is", env);
 if (env === "development" || env === "test") {
-  config.loadFile(__dirname + "/environments/" + env + ".json");
+  config.loadFile(path.join(__dirname, `${env}.json`));
 }
 if (env === "test_remote") {
+  path.join(path.join(__dirname, `${env}.json`));
   config.loadFile(__dirname + "/" + env + ".json");
 }
 
