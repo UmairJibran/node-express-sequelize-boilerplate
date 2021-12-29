@@ -21,7 +21,10 @@ jobs:
 
       - name: create env file
         run: |
-          touch .env
+          mkdir config
+          cd ./config
+          mkdir environments
+          cd environments
           echo VERSION = 0.0.1 >> ./config/environments/.env
           echo NODE_ENV = test_remote >> ./config/environments/.env
 
