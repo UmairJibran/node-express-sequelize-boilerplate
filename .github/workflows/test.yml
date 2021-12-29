@@ -21,7 +21,6 @@ jobs:
 
       - name: create env file
         run: |
-          mkdir config
           cd ./config
           mkdir environments
           cd environments
