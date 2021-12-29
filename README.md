@@ -65,6 +65,13 @@ npm test
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+This project uses github actions to run test, validate code format and styles, make sure to test your PRs before submitting.
+
+```bash
+npm run lint
+npm run prettier
+npm test
+```
 
 Please make sure to update tests as appropriate.
 
