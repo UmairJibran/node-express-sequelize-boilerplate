@@ -134,7 +134,7 @@ var config = convict({
 let env = config.get("env");
 console.log("environment is", env);
 if (env === "development" || env === "test") {
-  config.loadFile(path.join(__dirname, `${env}.json`));
+  config.loadFile(path.join(__dirname, "environments", `${env}.json`));
 }
 if (env === "test_remote") {
   path.join(path.join(__dirname, `${env}.json`));
