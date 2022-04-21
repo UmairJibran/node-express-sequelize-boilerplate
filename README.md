@@ -1,10 +1,12 @@
 # Backend Application Boilerplate
 
+![Backend Boiler Plate](https://user-images.githubusercontent.com/43789374/164505151-d39b46cf-28ac-4f4e-8438-83bf51179281.png)
+
 It is a basic application to give you a head start with your backend development
 
 ## Pre-Requisites
 
-The project uses [MySQL](https://www.mysql.com/) as the primary database solution. It uses [Firebase](https://www.console.firebase.google.com) for authentication purposes.
+The project uses [MySQL](https://www.mysql.com/) as the primary database solution.
 
 ## Environment requirements
 
@@ -31,18 +33,6 @@ To start development, make sure you have the following file set up at `config/en
     "name": "YOUR DATABASE NAME",
     "username": "YOUR DATABASE USERNAME",
     "password": "YOUR DATABASE PASSWORD"
-  },
-  "firebase": {
-    "api_key": "YOUR FIREBASE PROJECT's API KEY",
-    "type": "YOUR FIREBASE PROJECT's TYPE",
-    "project_id": "YOUR FIREBASE PROJECT's ID",
-    "private_key_id": "YOUR FIREBASE PROJECT's PRIVATE KEY ID",
-    "private_key": "YOUR FIREBASE PROJECT's PRIVATE KEY",
-    "client_email": "YOUR FIREBASE PROJECT's CLIENT EMAIL",
-    "client_id": "YOUR FIREBASE PROJECT's CLIENT ID",
-    "auth_uri": "YOUR FIREBASE PROJECT's AUTH URI",
-    "token_uri": "YOUR FIREBASE PROJECT's TOKEN URI",
-    "auth_provider_x509_cert_url": "YOUR FIREBASE PROJECT's AUTH PROVIDER X509 CERT URL"
   }
 }
 ```
