@@ -83,3 +83,4 @@ Please make sure to update tests as appropriate.
 ![Lines of code](https://img.shields.io/tokei/lines/github/UmairJibran/basic-backend-app?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/UmairJibran/basic-backend-app?style=for-the-badge)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/UmairJibran/basic-backend-app?style=for-the-badge)
+<!-- [![TESTER](https://github.com/UmairJibran/node-express-sequelize-boilerplate/actions/workflows/test.yml/badge.svg)](https://github.com/UmairJibran/node-express-sequelize-boilerplate/actions/workflows/test.yml) -->
